@@ -1,0 +1,46 @@
+{
+  "name": "@k44deusz/number-utils",
+  "version": "1.0.0",
+  "description": "Konwersja liczb BIN, OCT, DEC i HEX, z rozkładem pozycyjnym i krokami dzielenia.",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md",
+    "README.en.md"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT",
+  "author": "Bartosz Golat",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/K44DEUSZ/number-utils.git"
+  },
+  "bugs": {
+    "url": "https://github.com/K44DEUSZ/number-utils/issues"
+  },
+  "scripts": {
+    "build": "tsc",
+    "check": "tsc --noEmit && eslint . && prettier --check .",
+    "test": "npm run build && node --test",
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "@eslint/js": "9.39.5",
+    "@typescript-eslint/parser": "8.71.1",
+    "eslint": "9.39.5",
+    "prettier": "3.9.10",
+    "typescript": "5.9.3"
+  }
+}
