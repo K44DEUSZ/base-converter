@@ -1,4 +1,4 @@
-# number-utils
+# base-converter
 
 [Wersja polska](README.md)
 
@@ -6,14 +6,14 @@ Convert integers between binary, octal, decimal and hexadecimal notation. The li
 
 ## Usage
 
-Download the package for your chosen version from [Releases](https://github.com/K44DEUSZ/number-utils/releases), then install it in your project:
+Download the package for your chosen version from [Releases](https://github.com/K44DEUSZ/base-converter/releases), then install it in your project:
 
 ```sh
-npm install ./k44deusz-number-utils-1.0.0.tgz
+npm install ./k44deusz-base-converter-1.0.0.tgz
 ```
 
 ```ts
-import { parseInteger, formatInteger, getDivisionSteps } from "@k44deusz/number-utils";
+import { parseInteger, formatInteger, getDivisionSteps } from "@k44deusz/base-converter";
 
 const { value } = parseInteger("2D", 16);
 formatInteger(value, 2); // "101101"
@@ -36,7 +36,7 @@ npm run check
 npm test
 ```
 
-A successful check of changes on `main` publishes a release. If the version already exists, automation increments its patch number and commits the change. Packages are available on GitHub; an npm-registry account is not required.
+A push to `main` runs checks and tests. Releases are published separately through GitHub Actions, using the version saved in `package.json`. Automation does not change that version or overwrite an existing release. A published release updates the dependency used by the website after its checks pass.
 
 ## License
 

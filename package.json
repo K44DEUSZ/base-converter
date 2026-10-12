@@ -1,5 +1,5 @@
 {
-  "name": "@k44deusz/number-utils",
+  "name": "@k44deusz/base-converter",
   "version": "1.0.0",
   "description": "Konwersja liczb BIN, OCT, DEC i HEX, z rozkładem pozycyjnym i krokami dzielenia.",
   "type": "module",
@@ -25,10 +25,10 @@
   "author": "Bartosz Golat",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/K44DEUSZ/number-utils.git"
+    "url": "git+https://github.com/K44DEUSZ/base-converter.git"
   },
   "bugs": {
-    "url": "https://github.com/K44DEUSZ/number-utils/issues"
+    "url": "https://github.com/K44DEUSZ/base-converter/issues"
   },
   "scripts": {
     "build": "tsc",

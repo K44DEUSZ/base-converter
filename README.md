@@ -1,4 +1,4 @@
-# number-utils
+# base-converter
 
 [English version](README.en.md)
 
@@ -6,14 +6,14 @@ Konwerter liczb między zapisem binarnym, ósemkowym, dziesiętnym i szesnastkow
 
 ## Jak użyć
 
-Pobierz paczkę wybranego wydania z [Releases](https://github.com/K44DEUSZ/number-utils/releases), a następnie zainstaluj ją w swoim projekcie:
+Pobierz paczkę wybranego wydania z [Releases](https://github.com/K44DEUSZ/base-converter/releases), a następnie zainstaluj ją w swoim projekcie:
 
 ```sh
-npm install ./k44deusz-number-utils-1.0.0.tgz
+npm install ./k44deusz-base-converter-1.0.0.tgz
 ```
 
 ```ts
-import { parseInteger, formatInteger, getDivisionSteps } from "@k44deusz/number-utils";
+import { parseInteger, formatInteger, getDivisionSteps } from "@k44deusz/base-converter";
 
 const { value } = parseInteger("2D", 16);
 formatInteger(value, 2); // "101101"
@@ -36,7 +36,7 @@ npm run check
 npm test
 ```
 
-Po poprawnym sprawdzeniu zmian na `main` automat publikuje wydanie. Jeśli numer już istnieje, zwiększa ostatnią część wersji i zapisuje tę zmianę w Git. Paczki są dostępne na GitHubie; nie wymagają konta w rejestrze npm.
+Push na `main` uruchamia sprawdzenie kodu i testy. Wydanie publikuję osobno przez GitHub Actions, z numerem zapisanym w `package.json`. Automat nie zmienia tego numeru ani nie nadpisuje istniejącego wydania. Opublikowana paczka trafia do narzędzi na stronie po przejściu ich kontroli.
 
 ## Licencja
 
