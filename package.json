@@ -1,6 +1,6 @@
 {
   "name": "@k44deusz/base-converter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Konwersja liczb BIN, OCT, DEC i HEX, z rozkładem pozycyjnym i krokami dzielenia.",
   "type": "module",
   "exports": {
