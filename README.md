@@ -4,12 +4,14 @@
 
 Konwerter liczb między zapisem binarnym, ósemkowym, dziesiętnym i szesnastkowym. Poza wynikiem udostępnia rozkład pozycyjny i kolejne kroki dzielenia, jeśli chcesz pokazać, skąd wzięło się przeliczenie.
 
+Bieżące poprawki pozostają na wersji 1.0.0 i nie stanowią nowego wydania. Publiczna paczka 1.0.0 nie jest nadpisywana; nowe możliwości opisane poniżej dotyczą aktualnego kodu repozytorium. Aby je sprawdzić przed wydaniem, uruchom `npm ci`, `npm run build`, `npm pack` i zainstaluj uzyskany plik lokalnie. Changelog pozostaje w repozytorium i nie trafia do paczki.
+
 ## Jak użyć
 
 Pobierz paczkę wybranego wydania z [Releases](https://github.com/K44DEUSZ/base-converter/releases), a następnie zainstaluj ją w swoim projekcie:
 
 ```sh
-npm install ./k44deusz-base-converter-1.0.1.tgz
+npm install ./k44deusz-base-converter-1.0.0.tgz
 ```
 
 ```ts
