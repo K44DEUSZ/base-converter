@@ -21,6 +21,8 @@ export const numberBases = [
   { value: 16, label: "HEX", prefix: "0x" },
 ] as const;
 export type NumberBase = (typeof numberBases)[number]["value"];
+// Public display metadata must not control the parser's accepted prefixes.
+const prefixes: Readonly<Record<NumberBase, string>> = { 2: "0B", 8: "0O", 10: "", 16: "0X" };
 const digits = "0123456789ABCDEF";
 export const maxNumberBits = 2048;
 export const maxNumberDigits = maxNumberBits;
@@ -34,7 +36,7 @@ export function parseInteger(text: string, base: NumberBase) {
   const prefix = /^(0B|0O|0X)/.exec(input)?.[0];
   // 0B is also a valid unprefixed hexadecimal number (eleven).
   if (prefix && (base !== 16 || prefix !== "0B")) {
-    if (prefix !== numberBases.find((item) => item.value === base)?.prefix.toUpperCase()) {
+    if (prefix !== prefixes[base]) {
       throw new NumberError("prefix_mismatch");
     }
     input = input.slice(2);
